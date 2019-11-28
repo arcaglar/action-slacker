@@ -65,7 +65,7 @@ async function run() {
       channel: channel,
       icon_url: icon_url,
       username: username,
-      text: `Github action (${process.env.GITHUB_SHA}) triggered\n`,
+      text: `Title\n`,
       attachments: [
         {
           "title": `${process.env.GITHUB_REPOSITORY}`,
