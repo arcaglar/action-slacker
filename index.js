@@ -9,6 +9,7 @@ slack.onError = function (err) {
 
 // most @actions toolkit packages have async methods
 async function run() {
+  console.log('run')
   try {
     let attachment = {};
     attachment.fallback = core.getInput('fallback', {
