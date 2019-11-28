@@ -9,7 +9,6 @@ slack.onError = function (err) {
 
 // most @actions toolkit packages have async methods
 async function run() {
-  console.log('run')
   try {
     let attachment = {};
     attachment.fallback = core.getInput('fallback', {
@@ -66,7 +65,7 @@ async function run() {
       channel: channel,
       icon_url: icon_url,
       username: username,
-      text: `Github action (${process.env.GITHUB_WORKFLOW}) triggered\n`,
+      text: `Github action (${process.env.GITHUB_SHA}) triggered\n`,
       attachments: [
         {
           "title": `${process.env.GITHUB_REPOSITORY}`,
